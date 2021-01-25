@@ -1,23 +1,23 @@
 # WhiteTea_RNA-seq
 Yamashita et al., (2021) Front. Plant Sci. 11:611140. https://doi.org/10.3389/fpls.2020.611140<br>
-に用いたRNA-seq解析フロー
 
 ## Reference-based RNA-seq
-Reference genome: Wei et al., (2018). PNASで公開されたScaffold-level draft genomeを利用．<br>
-Tea Plant Information Archive (TPIA)データベース (http://tpia.teaplant.org/index.html) からゲノムアセンブリデータ (.fas) のダウンロード可能． <br>
+Reference genome: Scaffold-level draft genome (Wei et al., 2018. PNAS)．<br>
+Genome assembly data (.fas) was downloaded from Tea Plant Information Archive (TPIA) Database (http://tpia.teaplant.org/index.html).<br>
 
-以下解析フロー
+The sequence data in this RNA-seq have been deposited in the DNA Data Bank of Japan (DDBJ) Sequence Read Archive (accession number: DRA010755).
+
 <br>
-【Linux環境】
+【Linux】
 <br>
-Step1. リード前処理 (Trimmomatic)
+Step1. Read preprocessing (Trimmomatic)
 <br>
-(Step2. ゲノムインデックスファイルの作成 for STAR)
+(Step2. Building of genome index for STAR)
 <br>
-Step3. マッピング (STAR)
+Step3. Reference-based mapping (STAR)
 <br>
-(Step4. トランスクリプトインデックスファイルの作成 for RSEM)
+(Step4. Building of transcript index for RSEM)
 <br>
-Step5. 発現量定量 (RSEM)
+Step5. Calculation of transcript levels (RSEM)
 <br>
-Step6. 発現量テーブルの作成 (RSEM)
+Step6. Normalization of transcript levels (RSEM)
